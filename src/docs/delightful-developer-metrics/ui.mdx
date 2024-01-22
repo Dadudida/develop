@@ -11,21 +11,32 @@ In order to plot your metrics, we have developed a prototype user interface, whi
 
 The first step towards using the UI is to enable it, since right now it’s feature flagged. 
 These two flags need to be turned on:
+
 - `organizations:custom-metrics` - controls ingestions and UI
 - `organizations:ddm-ui` - controls UI
 
-See our guide on [feature flags](/feature-flags/) to learn how to do that.
+See our guide on [feature flags](/feature-flags/) to learn how to do that. Sentry employees can opt in organizations like [this](https://github.com/getsentry/sentry-options-automator/pull/499).
 
-Once you have the feature flag enabled you will magically see a new sidebar item called DDM and now the fun begins!
+Once you have the feature flag enabled you will magically see a new sidebar item called Metrics and now the fun begins!
 
-![DDM Sidebar](/images/sidebar.png)
+![Metrics Sidebar](/images/sidebar.png)
 
 ## Using the UI
 
 The UI is quite straightforward. You will see an option to add a widget, and each widget will have a series of properties. These properties include the metric you want to plot (identified by name), the aggregate operation to perform, the grouping method, and the display type.
 
-![DDM UI](/images/ddm.png)
+![Metrics UI](/images/ddm.png)
 
 You will also be able to **save your scratchpad**. This means that Sentry will store the representation of the scratchpad in your local storage. This allows you to maintain multiple scratchpads during an exploration.
+
+## Dashboards and Alerts
+
+You can alert on custom metrics. As always, you can create these alerts either from the Metrics page or by using the Alerts Wizard.
+
+Metrics also play nicely with Dashboards. You can plot custom metrics in the Metrics tab and then later save them to a dashboard or go through the Dashboards directly.
+
+![Metrics Dashboards and Alerts](/images/ddm-dashboards-alers.png)
+
+
 
 ## 🙏 Now have fun and don’t forget to give us feedback on [GitHub](https://github.com/getsentry/sentry/discussions/58584)

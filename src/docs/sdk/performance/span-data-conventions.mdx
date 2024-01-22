@@ -10,6 +10,15 @@ Keys on the `data` field should be lower-case and use underscores instead of cam
 
 Below describes the conventions for the Span interface for the `data` field on the span that are currently used by the product or are important to bring up.
 
+## General
+
+| Attribute        | Type   | Description                                                                                                                                                                                                    | Examples                                    |
+| ---------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| `code.filepath`  | string | The source code file name that identifies the code unit as uniquely as possible (preferably an absolute file path).                                                                                            | `/app/myapplication/http/handler/server.py` |
+| `code.lineno`    | number | The line number in `code.filepath` best representing the operation. It SHOULD point within the code unit named in `code.function`                                                                              | `42`                                        |
+| `code.function`  | string | The method or function name, or equivalent (usually rightmost part of the code unit's name).                                                                                                                   | `server_request`                            |
+| `code.namespace` | string | The "namespace" within which `code.function` is defined. Usually the qualified class or module name, such that `code.namespace` + some separator + `code.function` form a unique identifier for the code unit. | `http.handler`                              |
+
 ## HTTP
 
 | Attribute                              | Type   | Description                                           | Examples           |
@@ -30,6 +39,9 @@ Below describes the conventions for the Span interface for the `data` field on t
 | `call_stack`          | StackFrame[] | The most relevant stack frames, that lead to the File I/O span. The stack frame should adhere to the [`StackFrame`](https://develop.sentry.dev/sdk/event-payloads/stacktrace/#frame-attributes) interface. |                       |
 | `url`                 | string       | The URL of the resource that was fetched.                                                                                                                                                                  | `https://example.com` |
 | `type`                | string       | More granular type of the operation happening.                                                                                                                                                             | `fetch`               |
+| `frames.total`    | int | The number of total frames rendered during the lifetime of the span.    |  `60`   |
+| `frames.slow`     | int | The number of slow frames rendered during the lifetime of the span.     |   `2`   |
+| `frames.frozen`   | int | The number of frozen frames rendered during the lifetime of the span.   |   `1`   |
 
 ## Browser
 

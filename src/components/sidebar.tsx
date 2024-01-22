@@ -50,6 +50,9 @@ export default () => {
           <SidebarLink to="/philosophy/">Philosophy</SidebarLink>
           <SidebarLink to="/commit-messages/">Commit Messages</SidebarLink>
           <SidebarLink to="/code-review/">Code Review</SidebarLink>
+          <SidebarLink to="/frontend/pull-request-previews/">
+            Pull Request Previews
+          </SidebarLink>
           <SidebarLink to="/workflow/">Workflow</SidebarLink>
           <SidebarLink to="/continuous-integration/">Continuous Integration</SidebarLink>
           <SidebarLink to="/python-dependencies/">Python Dependencies</SidebarLink>
@@ -90,8 +93,13 @@ export default () => {
           <SidebarLink to="/dynamic-sampling/" title="Dynamic Sampling">
             <Children tree={tree.find(n => n.name === 'dynamic-sampling').children} />
           </SidebarLink>
-          <SidebarLink to="/delightful-developer-metrics/" title="Delightful Developer Metrics">
-            <Children tree={tree.find(n => n.name === 'delightful-developer-metrics').children} />
+          <SidebarLink
+            to="/delightful-developer-metrics/"
+            title="Sentry Developer Metrics"
+          >
+            <Children
+              tree={tree.find(n => n.name === 'delightful-developer-metrics').children}
+            />
           </SidebarLink>
         </ul>
       </li>
@@ -123,6 +131,7 @@ export default () => {
             Dependency Upgrade Policies
           </SidebarLink>
           <SidebarLink to="/frontend/development-server/">Development Server</SidebarLink>
+          <SidebarLink to="/frontend/component-library/">Component Library</SidebarLink>
           <SidebarLink to="/frontend/network-requests/">Network Requests</SidebarLink>
           <SidebarLink to="/frontend/defaultprops/">Typing DefaultProps</SidebarLink>
           <SidebarLink to="/frontend/using-hooks/">Using hooks</SidebarLink>
@@ -183,31 +192,7 @@ export default () => {
           <SidebarLink to="/sdk/unified-api/" title="Unified API"></SidebarLink>
           <SidebarLink to="/sdk/features/">Expected Features</SidebarLink>
           <SidebarLink to="/sdk/data-handling/">Data Handling</SidebarLink>
-          <SidebarLink to="/sdk/store/">Store Endpoint</SidebarLink>
           <SidebarLink to="/sdk/envelopes/">Envelopes</SidebarLink>
-          <SidebarLink to="/sdk/rate-limiting/">Rate Limiting</SidebarLink>
-          <SidebarLink to="/sdk/distributed-tracing/">Distributed Tracing</SidebarLink>
-          <SidebarLink to="/sdk/performance/" title="Performance">
-            <SidebarLink to="/sdk/performance/span-operations/">
-              Span Operations
-            </SidebarLink>
-            <SidebarLink to="/sdk/performance/span-data-conventions/">
-              Span Data Conventions
-            </SidebarLink>
-            <SidebarLink to="/sdk/performance/trace-origin/">Trace Origin</SidebarLink>
-            <SidebarLink to="/sdk/performance/ui-event-transactions/">
-              UI Event Transactions
-            </SidebarLink>
-            <SidebarLink to="/sdk/performance/time-to-initial-full-display/">
-              Time to Initial/Full Display
-            </SidebarLink>
-            <SidebarLink to="/sdk/performance/dynamic-sampling-context/">
-              Dynamic Sampling Context
-            </SidebarLink>
-            <SidebarLink to="/sdk/performance/opentelemetry/">
-              OpenTelemetry Support
-            </SidebarLink>
-          </SidebarLink>
           <SidebarLink to="/sdk/event-payloads/" title="Event Payloads">
             <SidebarLink to="/sdk/event-payloads/transaction/">
               Transaction Type
@@ -240,18 +225,45 @@ export default () => {
             <SidebarLink to="/sdk/event-payloads/threads/">Threads Interface</SidebarLink>
             <SidebarLink to="/sdk/event-payloads/user/">User Interface</SidebarLink>
           </SidebarLink>
+          <SidebarLink to="/sdk/profiles/">Profiles</SidebarLink>
+          <SidebarLink to="/sdk/metrics/">Metrics</SidebarLink>
+          <SidebarLink to="/sdk/check-ins/">Check-Ins</SidebarLink>
           <SidebarLink to="/sdk/sessions/">Sessions</SidebarLink>
           <SidebarLink to="/sdk/client-reports/">Client Reports</SidebarLink>
-          <SidebarLink to="/sdk/check-ins/">Check-Ins</SidebarLink>
-          <SidebarLink to="/sdk/serverless/" title="Serverless SDKs">
-            <SidebarLink to="/sdk/serverless/aws-lambda">AWS Lambda</SidebarLink>
+          <SidebarLink to="/sdk/distributed-tracing/">Distributed Tracing</SidebarLink>
+          <SidebarLink to="/sdk/performance/" title="Performance">
+            <SidebarLink to="/sdk/performance/span-operations/">
+              Span Operations
+            </SidebarLink>
+            <SidebarLink to="/sdk/performance/span-data-conventions/">
+              Span Data Conventions
+            </SidebarLink>
+            <SidebarLink to="/sdk/performance/trace-origin/">Trace Origin</SidebarLink>
+            <SidebarLink to="/sdk/performance/ui-event-transactions/">
+              UI Event Transactions
+            </SidebarLink>
+            <SidebarLink to="/sdk/performance/time-to-initial-full-display/">
+              Time to Initial/Full Display
+            </SidebarLink>
+            <SidebarLink to="/sdk/performance/dynamic-sampling-context/">
+              Dynamic Sampling Context
+            </SidebarLink>
+            <SidebarLink to="/sdk/performance/opentelemetry/">
+              OpenTelemetry Support
+            </SidebarLink>
           </SidebarLink>
-          <SidebarLink to="/sdk/signal-handlers/">Signal Handlers</SidebarLink>
           <SidebarLink to="/sdk/research/performance">
             Research: Performance Monitoring API
           </SidebarLink>
-          <SidebarLink to="/sdk/profiles/">Profiles</SidebarLink>
-          <SidebarLink to="/sdk/setup-wizards/" title="Setup Wizards">Setup Wizards</SidebarLink>
+          <SidebarLink to="/sdk/setup-wizards/" title="Setup Wizards">
+            Setup Wizards
+          </SidebarLink>
+          <SidebarLink to="/sdk/rate-limiting/">Rate Limiting</SidebarLink>
+          <SidebarLink to="/sdk/signal-handlers/">Signal Handlers</SidebarLink>
+          <SidebarLink to="/sdk/serverless/" title="Serverless SDKs">
+            <SidebarLink to="/sdk/serverless/aws-lambda">AWS Lambda</SidebarLink>
+          </SidebarLink>
+          <SidebarLink to="/sdk/store/">Store Endpoint</SidebarLink>
         </ul>
       </li>
       <li className="mb-3" data-sidebar-branch>
